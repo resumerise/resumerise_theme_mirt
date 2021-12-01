@@ -6,20 +6,20 @@
 	<% } %>
 	<div class="article-container">
 		<% it.resume?.references.forEach(function(reference) { %>
-			<article>
+			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference, id: reference.id, showDelete: true}) %>
-				<div class="article-header">
+				<div class="article-header left-section-article-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 						value: reference.name,
 						classes: 'article__title'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article-content left-section-article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 						value: reference.reference,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle references__text'
 					}) %>
 				</div>
 			</article>

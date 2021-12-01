@@ -4,9 +4,9 @@
 	<% } %>
 	<div class="article-container">
 		<% it.resume?.projects.forEach(function(project) { %>
-			<article>
+			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
-				<div class="article-header">
+				<div class="article-header left-section-article-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 						value: project.title,
@@ -31,7 +31,7 @@
 						classes: 'article__date'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article-content left-section-article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 						value: project.summary,

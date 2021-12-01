@@ -1,7 +1,9 @@
 <section id='basics' class="basics">
+    <div class="image--container">
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
+    </div>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
         <header><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
@@ -10,12 +12,12 @@
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
             value: it.resume.basics.name,
-            classes: 'article__text'
+            classes: 'article__text basics__header'
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.label, 
             value: it.resume.basics.label,
-            classes: 'article__text'
+            classes: 'article__text article__subtitle'
         }) %>
         <%~ include('key-url-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
