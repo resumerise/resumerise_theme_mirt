@@ -1,10 +1,12 @@
 <section id="awards" class="awards">
 	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
-		<header>
+		<header class="awards__header">
 			<%= it.resume.settings.labels.categoryProperty.award.categoryTitle %>
 		</header>
 	<% } %>
 	<div class="article-container">
+	     <div class="awards-left-section--header--container">
+    </div>
 		<% it.resume?.awards.forEach(function(award) { %>
 			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
@@ -12,17 +14,17 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
 						value: award.title,
-						classes: 'article__title'
+						classes: 'article__title--left-section'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
 						value: award.awarder,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle--left-section'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
 						value: it.formatDate(award.date, it.resume.settings),
-						classes: 'article__date'
+						classes: 'article__date--left-section'
 					}) %>
 				</div>
 				<div class="article-content left-section-article-content">

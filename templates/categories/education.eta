@@ -1,10 +1,12 @@
 <section id="education" class="certifications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<header>
+		<header class="left-section__header">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</header>
 	<% } %>
 	<div class="article-container">
+	     <div class="education-left-section--header--container">
+    </div>
 		<% it.resume?.education.forEach(function(education) { %>
 			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
@@ -12,12 +14,12 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 						value: education.institution,
-						classes: 'article__title'
+						classes: 'article__title--left-section'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 						value: education.area,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle--left-section'
 					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate, 
@@ -25,7 +27,7 @@
 						endDate: education.endDate,
 						present: education.present,
 						settings: it.resume.settings,
-						classes: 'article__date'
+						classes: 'article__date--left-section'
 					}) %>
 				</div>
 				<div class="article-content left-section-article-content">
