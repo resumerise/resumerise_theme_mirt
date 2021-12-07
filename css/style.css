@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
@@ -37,16 +36,15 @@ a {
 }
 
 @media print {
-  body {
+  html, body {
     width: 21cm;
-    height: 29.7cm;
+    height: 99% !important;
     margin: 0 16mm 27mm 16mm;
+    padding-top: 0;
   }
+
   .left-section-article-header {
     width: 75% !important;
-  }
-  body {
-    padding-top: 0;
   }
   .left-section--header--container {
     width: 21% !important;
@@ -83,24 +81,6 @@ a {
     display: flex;
     justify-content: flex-end !important;
   }
-  .left-section__header {
-    width: 45% !important;
-    text-align: right !important;
-    position: relative;
-    right: 1em;
-  }  
-  .references__header {
-    width: 45% !important;
-    text-align: right !important;
-    position: relative;
-    right: 0.5em;
-  }
-  .awards__header {
-    width: 45% !important;
-    text-align: right !important;
-    position: relative;
-    right: 1em;
-  }
   .image--container {
     display: flex !important;
     justify-content: flex-end !important;
@@ -124,8 +104,8 @@ section {
 }
 
 header {
-  width: 35%;
-  text-align: right;
+  width: 100%;
+  text-align: left;
 }
 
 section > header {
@@ -144,45 +124,6 @@ article {
 
 .article-header {
   margin-bottom: var(--article-header-margin);
-}
-
-.left-section--header--container {
-  position: absolute;
-  width: 18%;
-  height: 100%;
-  border-right: 2px gray solid;
-}
-
-.projects-left-section--header--container {
-  position: absolute;
-  width: 18%;
-  height: 100%;
-  border-right: 2px gray solid;
-  height: 155%;
-}
-
-.references-left-section--header--container {
-  position: absolute;
-  width: 18%;
-  height: 100%;
-  border-right: 2px gray solid;
-  height: 90%;
-}
-
-.awards-left-section--header--container {
-  position: absolute;
-  width: 18%;
-  height: 100%;
-  border-right: 2px gray solid;
-  height: 52.5%;
-}
-
-.education-left-section--header--container {
-  position: absolute;
-  width: 18%;
-  height: 100%;
-  border-right: 2px gray solid;
-  height: 75%;
 }
 
 .margin-left--small {
@@ -232,7 +173,10 @@ article {
 .picture img {
   border-radius: var(--picture-radius);
 }
-
+.profiles {
+  width: 60%;
+  text-align: center;
+}
 /* PROFILES */
 .profiles .article-container {
   display: flex;
@@ -340,6 +284,34 @@ html:not(.INTERACTIVE) .profiles article .profile-item {
 }
 
 /* Layout */
+
+.projects-left-section--header--container {
+  position: absolute;
+  width: 18%;
+  border-right: 2px gray solid;
+  height: 55.5em;
+}
+
+.references-left-section--header--container {
+  position: absolute;
+  width: 18%;
+  border-right: 2px gray solid;
+  height: 33em;
+}
+
+.awards-left-section--header--container {
+  position: absolute;
+  width: 18%;
+  border-right: 2px gray solid;
+  height: 18.5em;
+}
+
+.education-left-section--header--container {
+  position: absolute;
+  width: 18%;
+  border-right: 2px gray solid;
+  height: 27.5em;
+}
 
 .left--right--section--container {
   display: grid;
@@ -456,6 +428,7 @@ header {
   font-size: var(--article-subtitle-font-size);
   font-weight: 400;
   text-align: left;
+  padding-left: 3%;
   width: 100%;
 }
 
@@ -465,7 +438,16 @@ header {
   text-transform: uppercase;
 }
 
+.left-section__header {
+  position: relative;
+  right: 0;
+  width: 35%;
+}
+
 @media screen and (max-width: 1024px) {
+  .left-section__header {
+    right: 0;
+  }
   .article__title--left-section,
   .article__subtitle--left-section,
   .article__date--left-section,
@@ -599,5 +581,30 @@ header {
   }
   .references-article-header {
     width: 100% !important;
+  }
+}
+
+.left-section--header--container {
+  position: absolute;
+  width: 18%;
+  height: 37.5em;
+  border-right: 2px gray solid;
+}
+
+@media screen and (max-height: 550px) {
+  .left-section--header--container {
+    position: absolute;
+    width: 18%;
+    height: 45em !important;
+    border-right: 2px gray solid;
+  }
+  .awards-left-section--header--container {
+    position: absolute;
+    width: 18%;
+    border-right: 2px gray solid;
+    height: 22.5em !important;
+  }
+  .references-left-section--header--container {
+    height: 34em !important;
   }
 }

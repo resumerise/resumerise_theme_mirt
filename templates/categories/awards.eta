@@ -1,6 +1,6 @@
 <section id="awards" class="awards">
 	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
-		<header class="awards__header">
+		<header class="awards__header left-section__header">
 			<%= it.resume.settings.labels.categoryProperty.award.categoryTitle %>
 		</header>
 	<% } %>
