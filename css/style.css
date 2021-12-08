@@ -103,10 +103,7 @@ section {
   margin-bottom: 3em;
 }
 
-header {
-  width: 100%;
-  text-align: left;
-}
+
 
 section > header {
   font-size: var(--header-font-size);
@@ -439,9 +436,8 @@ header {
 }
 
 .left-section__header {
-  position: relative;
-  right: 0;
-  width: 35%;
+  width: 32.5%;
+  text-align: right;
 }
 
 @media screen and (max-width: 1024px) {
