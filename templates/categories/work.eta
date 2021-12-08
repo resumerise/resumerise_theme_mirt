@@ -4,7 +4,7 @@
     <% } %>
  
     <div class="article-container">
-       <div class="left-section--header--container">
+       <div class="work-left-section--header--container">
        </div>
         <% it.resume?.work.forEach(function(work) { %>
 

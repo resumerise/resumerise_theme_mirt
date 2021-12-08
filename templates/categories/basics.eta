@@ -25,7 +25,7 @@
             value: it.resume.basics.website,
             classes: 'article__url',
             iconClass: 'fas fa-link'
-        }) %>
+        }) %> 
 
         <%~ include('key-mail-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
