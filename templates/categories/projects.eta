@@ -1,26 +1,28 @@
 <section id="project" class="project">
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
-		<header><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
+		<header class="left-section__header"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
 	<% } %>
 	<div class="article-container">
+	     <div class="projects-left-section--header--container">
+    </div>
 		<% it.resume?.projects.forEach(function(project) { %>
-			<article>
+			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
-				<div class="article-header">
+				<div class="article-header left-section-article-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 						value: project.title,
-						classes: 'article__title'
+						classes: 'article__title--left-section'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
 						value: project.client,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle--left-section'
 					}) %>
 					<%~ include('key-url-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
 						value: project.website,
-						classes: 'article__url'
+						classes: 'article__url--left-section'
 					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate,
@@ -28,10 +30,10 @@
 						endDate: project.endDate,
 						present: project.present,
 						settings: it.resume.settings,
-						classes: 'article__date'
+						classes: 'article__date--left-section'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article-content left-section-article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 						value: project.summary,

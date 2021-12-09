@@ -1,23 +1,25 @@
-<section id="education" class="certifications">
+<section id="education" class="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<header>
+		<header class="left-section__header">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</header>
 	<% } %>
 	<div class="article-container">
+	     <div class="education-left-section--header--container">
+    </div>
 		<% it.resume?.education.forEach(function(education) { %>
-			<article>
+			<article class="left-section-article-container">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
-				<div class="article-header">
+				<div class="article-header left-section-article-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 						value: education.institution,
-						classes: 'article__title'
+						classes: 'article__title--left-section'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 						value: education.area,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle--left-section'
 					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate, 
@@ -25,21 +27,23 @@
 						endDate: education.endDate,
 						present: education.present,
 						settings: it.resume.settings,
-						classes: 'article__date'
+						classes: 'article__date--left-section'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article-content left-section-article-content">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.studyType, 
 						value: education.studyType,
 						classes: 'article__text'
 					}) %>
+					<div class="education__article__text--container">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.gpa, 
 						value: education.gpa,
 						showLabel: true,
 						classes: 'article__text'
 					}) %>
+					</div>
 					<%~ include('list', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.courses, 
 						data: education.courses,

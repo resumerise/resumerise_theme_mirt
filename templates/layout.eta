@@ -12,17 +12,16 @@
 	</head>
 	<body>
 		<main>
+		<div class="main-div">
+		<div class="header">
 			<!-- BASICS -->
 			<%~ include("basic", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-			
-			<!-- PROJECT -->
-			<%~ include("project", {
-				resume: it.resume,
-				formatDate: it.formatDate
-			}) %>
+		</div>
+		<div class="left--right--section--container">
+		<div class="left-section">
 
 			<!-- WORK -->
 			<%~ include("work", {
@@ -30,20 +29,34 @@
 				formatDate: it.formatDate
 			}) %>
 
+			<!-- PROJECT -->
+			<%~ include("project", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
+
+			<!-- REFERENCE -->
+			<%~ include("reference", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
+
+			<!-- AWARDS -->
+			<%~ include("awards", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
+			
 			<!-- EDUCATION -->
 			<%~ include("education", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-			
+		 </div>
+		 <div class="right-section">
+		 
 			<!-- PUBLICATION -->
 			<%~ include("publication", {
-				resume: it.resume,
-				formatDate: it.formatDate
-			}) %>
-			
-			<!-- REFERENCE -->
-			<%~ include("reference", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
@@ -66,12 +79,6 @@
 				formatDate: it.formatDate
 			}) %>
 			
-			<!-- AWARDS -->
-			<%~ include("awards", {
-				resume: it.resume,
-				formatDate: it.formatDate
-			}) %>
-			
 			<!-- INTEREST -->
 			<%~ include("interest", {
 				resume: it.resume,
@@ -89,6 +96,9 @@
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
+		 </div>
+		 </div>
+			</div>
 		</main>
 	</body>
 </html>
